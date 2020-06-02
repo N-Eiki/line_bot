@@ -22,9 +22,6 @@ class LineMessage():
             'replyToken': reply_token,
             'messages': self.messages
         }
-        print('test')
-        print(body)
-        print('test')
         req = urllib.request.Request(REPLY_ENDPOINT_URL, json.dumps(body).encode(), HEADER)
         try:
             with urllib.request.urlopen(req) as res:
